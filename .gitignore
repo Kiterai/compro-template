@@ -1,1 +1,5 @@
 build/
+.vscode/settings.json
+.vscode/snippet.code-snippets
+snippet/*
+!snippet/.gitkeep

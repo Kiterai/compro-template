@@ -37,10 +37,10 @@ int main() {
         auto fn = f.path().filename().string();
 
         ss << "\"" << fn << "\": {"
-		"\"prefix\": \"lib"  << fn << "\","
-		"\"body\": ["
+        "\"prefix\": \"lib"  << fn << "\","
+        "\"body\": ["
         << mls(buf) << "]"
-	    "}"
+        "}"
         << endl;
 
         s.push_back(ss.str());
