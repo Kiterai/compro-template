@@ -23,13 +23,15 @@ string mls(string s){
 }
 
 int main() {
+    cout << "updating..." << endl;
+
     vector<string> s;
 
     for (auto f : fs::directory_iterator("snippet")) {
         ifstream ifs(f.path());
         string buf(f.file_size(), ' ');
         ifs.read(buf.data(), f.file_size());
-        while(buf.back() == ' ' || buf.back() == '\n')
+        while(!buf.empty() && (buf.back() == ' ' || buf.back() == '\n'))
             buf.pop_back();
 
         ostringstream ss;
@@ -44,6 +46,7 @@ int main() {
         << endl;
 
         s.push_back(ss.str());
+        cout << "done: " << fn << endl;
     }
     
     ofstream ofs(".vscode/snippet.code-snippets");
