@@ -8,6 +8,11 @@
         },
         {
             "type": "shell",
+            "label": "test",
+            "command": "cmake . -B build && cmake --build build && ./build/Debug/test.exe",
+        },
+        {
+            "type": "shell",
             "label": "snippet update",
             "command": "cmake . -B build && cmake --build build && ./build/Debug/tool.exe",
         }
