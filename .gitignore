@@ -3,3 +3,7 @@ build/
 .vscode/snippet.code-snippets
 snippet/*
 !snippet/.gitkeep
+libs/*
+!libs/.gitkeep
+test/*
+!test/.gitkeep
